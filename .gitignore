@@ -1,0 +1,64 @@
+# ########## Archivos Sensibles y de Configuración de Entorno ##########
+# La regla más importante: NUNCA subas tus credenciales.
+config/database.php
+.env
+
+# ########## Dependencias de PHP (Composer) ##########
+# Esta carpeta es manejada por Composer. Solo necesitas subir composer.json y composer.lock.
+/vendor/
+
+# ########## Dependencias de Frontend (si usas Node.js) ##########
+# Similar a /vendor/, esta carpeta es manejada por npm o yarn.
+/node_modules/
+
+# ########## Archivos de Python ##########
+# Entornos virtuales
+/venv/
+/env/
+/.venv/
+/.env/
+
+# Archivos de caché de Python
+__pycache__/
+*.pyc
+
+# ########## Archivos Compilados de C++ ##########
+# Ignora los ejecutables y archivos objeto. Solo sube el código fuente.
+# Asumiendo que los ejecutables van a la carpeta 'bin' de tu servicio C++
+/services/cpp/bin/
+*.o
+*.exe
+*.out
+
+# ########## Archivos de Sistema Operativo ##########
+# Archivos de macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Archivos de Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+
+# ########## Archivos de Editores de Código e IDEs ##########
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# ########## Logs y Archivos Temporales ##########
+# Nunca subas logs, pueden contener información sensible y crecer mucho.
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ########## Archivos de Build (si aplica) ##########
+# Si en el futuro usas herramientas que compilan tu JS/CSS
+/dist/
+/build/

@@ -1,9 +1,14 @@
 <?php
-try {
-    $conn = new PDO("mysql:host=127.0.0.1;dbname=snp_genomics", "root", "TuContraseñaAquí");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "✅ Conexión exitosa a la base de datos.";
-} catch (PDOException $e) {
-    echo "❌ Error de conexión: " . $e->getMessage();
-}
-?>
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
+
+return [
+    'host'     => $_ENV['DB_HOST'] ?? '127.0.0.1',
+    'port'     => $_ENV['DB_PORT'] ?? '3306',
+    'dbname'   => $_ENV['DB_DATABASE'] ?? '',
+    'user'     => $_ENV['DB_USERNAME'] ?? 'root',
+    'password' => $_ENV['DB_PASSWORD'] ?? ''
+];

@@ -1,0 +1,54 @@
+/* Enlaces */
+a {
+  text-decoration: none;
+  color: #ffffff; /* texto blanco */
+}
+
+/* Lista horizontal sin viñetas */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Header general */
+header {
+  height: 10%;
+  width: 100%;
+  display: block;
+  background-color: #2469a0;
+}
+
+/* Contenedor del header */
+.header-content {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo alineado a la izquierda */
+.header-content-img {
+  flex-shrink: 0;
+}
+
+.logo-svg {
+  height: 85px;
+  width: auto;
+  display: block;
+}
+
+/* Navegación alineada a la derecha */
+.navbar {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar ul {
+  align-items: center;
+}

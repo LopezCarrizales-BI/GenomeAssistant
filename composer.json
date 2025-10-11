@@ -1,0 +1,7 @@
+{
+  "name": "benjamin/genomeasistant",
+  "description": "Proyecto PHP con integración Perl y API",
+  "require": {
+    "guzzlehttp/guzzle": "^7.10"
+  }
+}

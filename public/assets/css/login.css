@@ -1,0 +1,128 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2469a0;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  display: flex;
+  font-size: 30px;
+}
+
+button {
+  display: block;
+  margin: 5% auto 0 auto;
+  border: none;
+  width: 20%;
+  height: 10%;
+  border-radius: 10px;
+  background-color: #3dd6af;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.main-container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 70vh;
+  margin: auto;
+  border-radius: 10%;
+  overflow: hidden;
+}
+
+.main-container-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-container-title {
+  height: 20%;
+}
+
+.main-container-tutorial {
+  height: 5%;
+  font-size: 15px;
+  text-align: center;
+  margin: auto;
+  color: #666666;
+}
+
+.main-container-form {
+  display: flex;
+  flex-direction: column;
+  height: 55%;
+  justify-content: space-between;
+}
+
+form {
+  height: 100%;
+}
+
+.form-group {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#femail,
+#fpassword {
+  border-radius: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  background-color: #ebebeb;
+  height: 30px;
+  width: 80%;
+  margin: 3% auto 0 auto;
+}
+
+.password-group {
+  position: relative;
+}
+
+.forgot-link {
+  position: absolute;
+  bottom: 5px;
+  right: 10%;
+  font-size: 12px;
+  color: #3dd6af;
+}
+
+.main-container-sing_up {
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.main-container-sing_up p,
+.main-container-sing_up a {
+  max-width: 100%;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+.main-container-policy {
+  height: 10%;
+}

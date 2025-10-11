@@ -1,0 +1,73 @@
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: block;
+}
+
+main {
+  height: 85%;
+  width: 100%;
+}
+
+.search-section,
+.results-section {
+  height: 50%;
+  width: 100%;
+}
+
+form {
+  height: 100%;
+}
+
+fieldset {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+button {
+  background-color: #3dd6af;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  margin: auto;
+}
+
+.results-data {
+  height: 30vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.results-data h3 {
+  flex-shrink: 0;
+  margin-bottom: 10px;
+}
+
+.results-data pre {
+  flex-grow: 1;
+  min-height: 0;
+  overflow: auto;
+  background-color: #2b2b2b;
+  color: #f8f8f2;
+  padding: 1em;
+  border-radius: 3px;
+  margin: 0;
+}

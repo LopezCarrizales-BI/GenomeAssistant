@@ -1,54 +1,97 @@
-/* Enlaces */
-a {
-  text-decoration: none;
-  color: #ffffff; /* texto blanco */
-}
-
-/* Lista horizontal sin viñetas */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 1.5rem;
-}
-
-/* Header general */
 header {
-  height: 10%;
-  width: 100%;
-  display: block;
-  background-color: #2469a0;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 7vh;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
 }
 
-/* Contenedor del header */
-.header-content {
-  height: 100%;
-  width: 90%;
-  margin: 0 auto;
+.header-container {
   display: flex;
-  justify-content: space-between;
+  width: 80%;
+}
+
+.logo-nav {
+  display: inline-flex;
+  width: 60%;
   align-items: center;
 }
 
-/* Logo alineado a la izquierda */
-.header-content-img {
-  flex-shrink: 0;
+.home {
+  display: inline-flex;
+  height: 100%;
+  align-items: center;
 }
 
-.logo-svg {
-  height: 85px;
-  width: auto;
-  display: block;
+.logo {
+  height: 80%;
 }
 
-/* Navegación alineada a la derecha */
 .navbar {
-  flex-grow: 1;
-  display: flex;
+  display: inline-flex;
+  height: 100%;
+  align-items: center;
+}
+
+.nav-options {
+  display: inline-flex;
+  height: 100%;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-option {
+  display: inline-flex;
+  align-items: center;
+  height: fit-content;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.nav-link {
+  display: inline-flex;
+  height: fit-content;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.8rem;
+  color: #6b7280;
+}
+
+.nav-link:hover {
+  color: #10bce3;
+  background-color: #f3f4f6;
+  border-radius: 1rem;
+}
+
+.profile-nav {
+  display: inline-flex;
+  width: 40%;
+  align-items: center;
   justify-content: flex-end;
 }
 
-.navbar ul {
+.notifications-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.notifications-icon {
+  display: inline-flex;
+  height: 2.5rem;
+  width: 2.5rem;
   align-items: center;
+  justify-content: center;
+  color: #6b7280;
+}
+
+.notifications-icon:hover {
+  color: #10bce3;
+  background-color: #f3f4f6;
+  border-radius: 100%;
 }

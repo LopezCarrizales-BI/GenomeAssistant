@@ -3,49 +3,49 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>GenomeAsistant | Login</title>
+    
+    <title>GenomeAssistant | Login</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Benjamín Iván López Carrizales">
     <meta name="description" content="Página para iniciar sesión en GenomeAsistant">
-    <link rel="stylesheet" href="<?php asset('assets/css/normalize.css'); ?>">
-    <link rel="stylesheet" href="<?php asset('assets/css/login.css'); ?>">
+    
+    <link rel="stylesheet" href="<?php asset('/assets/css/normalize.css'); ?>">
+    <link rel="stylesheet" href="<?php asset('/assets/css/login.css'); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="main-container">
-        <div class="main-container-content">
-            <div class="main-container-title">
-                <h3>Welcome to GenomeAsistant</h3>
+    <div class="login-container">
+        <div class="login-header">
+            <h2>Welcome to GenomeAssistant</h2>
+            <p>Please sign in to your account</p>
+        </div>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required aria-label="Correo electrónico">
             </div>
-            <div class="main-container-tutorial">
-                <p><a href="./">How to use GenomeAsistant</a></p>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required aria-label="Contraseña">
             </div>
-            <div class="main-container-form">
-                <form>
-                    <div class="form-group">
-                        <label for="femail">Email:</label>
-                        <input type="email" id="femail" name="femail" placeholder="Enter your email" required>
-                    </div>
-
-                    <div class="form-group password-group">
-                        <label for="fpassword">Password:</label>
-                        <input type="password" id="fpassword" name="fpassword" placeholder="Enter your password" required>
-                        <a href="./" class="forgot-link">Forgot password</a>
-                    </div>
-
-                    <button type="submit">Sign in</button>
-                </form>
+            <div class="remember-forgot">
+                <label class="remember-me">
+                    <input type="checkbox" name="remember-me" id="remember-me">
+                    Remember me
+                </label>
+                <div class="forgot-password">
+                    <a href="#" aria-label="¿Olvidaste tu contraseña?">Forgot password?</a>
+                </div>
             </div>
-            <div class="main-container-sing_up">
-                <p>New user?</p>
-                <a href="./">Register now to GenomeAsistant</a>
-            </div>
-            <div class="main-container-policy">
-                <h6>By creating this account, you agree to our Privacy <a href="./">Policy</a></h6>
-            </div>
+            <button type="submit" class="login-button">Sign in</button>
+        </form>
+        <div class="signup-link">
+            New to GenomeAssistant? <br>
+            <a href="#" aria-label="Regístrate">Create an account</a>
         </div>
     </div>
 </body>

@@ -1,11 +1,3 @@
-footer {
-  display: flex;
-  flex-wrap: wrap;
-  height: 5%;
-  width: 100%;
-  background-color: #2469a0;
-}
-
 .footer-content-rights {
   height: 5%;
   display: flex;

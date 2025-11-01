@@ -1,0 +1,35 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  width: 100vw;
+  height: 95vh;
+  background-color: #f3f4f6;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 3vh;
+  background-color: #2469a0;
+}
+
+.selected-link {
+  color: #10bce3;
+  border-bottom: 2px solid #10bce3;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.selected-link:hover {
+  background-color: #fff;
+}

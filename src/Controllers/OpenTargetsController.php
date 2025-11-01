@@ -5,7 +5,7 @@ use GuzzleHttp\Exception\RequestException;
 
 class OpenTargetsController {
     public function procesarBusqueda() {
-        $dataType = $_POST['data-type']; // 'snp', 'name', etc.
+        $dataType = $_POST['data-type'];
         $value = $_POST['value'];
         
         $baseUrl = "https://api.platform.opentargets.org/api/v4/public/";

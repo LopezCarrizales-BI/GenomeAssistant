@@ -1,52 +1,54 @@
 <?php
 
-define('BASE_URL', 'http://localhost/GenomeAsistant/public/');
+define('ROOT_PATH', dirname(__DIR__));
 
+define('BASE_URL', 'http://localhost:3000/');
+
+define('BASE_DIR', '/public');
+
+/**
+ * Función que construye una URL web válida para recursos estáticos.
+ * @param string $path La ruta relativa al recurso (ej: 'assets/css/style.css').
+ * @return void Imprime la URL completa.
+ */
 function asset($path)
 {
-    echo BASE_URL . $path;
+    echo BASE_URL . ltrim($path, '/');
 }
 
-require_once '../src/Controllers/EnsemblController.php';
-require '../vendor/autoload.php';
+require ROOT_PATH . '/vendor/autoload.php';
 
-$request_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$request_path = str_replace('/GenomeAsistant/public', '', $request_uri);
+require_once ROOT_PATH . '/src/router.php';
+require_once ROOT_PATH . '/src/Controllers/EnsemblController.php';
 
-if ($request_path === '') {
-    $request_path = '/';
-}
+$request_uri = $_SERVER['REQUEST_URI'];
+$request_path = cleanPath($request_uri, BASE_DIR);
 
-// Inicializamos las variables que la vista podría necesitar
-$resultados = null;
-$error = null;
-$userInput = [];
 
-switch ($request_path) {
+$response_data = handleRoute($request_path, BASE_DIR);
 
-    case '/':
-        // Simplemente muestra la página home vacía
-        break;
+$resultados = $response_data['resultados'] ?? null;
+$error = $response_data['error'] ?? null;
+$userInput = $response_data['userInput'] ?? [];
+$viewFile = $response_data['view'] ?? 'home.php';
 
-    case '/ensembl/buscar':
-        // Si la ruta es la de búsqueda, procesamos los datos
-        $controller = new EnsemblController();
-        $response = $controller->procesarBusqueda(); // Capturamos la respuesta
 
-        $resultados = $response['data'];
-        $error = $response['error'];
-        $userInput = $response['userInput'];
-        break;
+$view_path = ROOT_PATH . '/src/Views/' . $viewFile;
+$layout_path = ROOT_PATH . '/src/Views/layout.php';
 
-    case '/login':
-        require_once '../src/Views/login.php';
-        // Usamos exit() para que no intente cargar home.php después
+if ($viewFile === 'login.php') {
+    if (file_exists($view_path)) {
+        require_once $view_path;
         exit();
-
-    default:
-        http_response_code(404);
-        echo "Error 404: Página no encontrada";
+    } else {
+        http_response_code(500);
+        echo "Error interno: La vista de login no se encontró.";
         exit();
+    }
 }
 
-require_once '../src/Views/home.php';
+if (file_exists($layout_path)) {
+    require_once $layout_path;
+} else {
+    http_response_code(500);
+}

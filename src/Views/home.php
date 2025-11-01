@@ -1,63 +1,66 @@
-<!DOCTYPE html>
-<html lang="es">
+<div class="home-content">
+    <section class="search-section">
+        <form id="search-form" class="search-form">
+            <?php require_once ROOT_PATH . '\src\Views\searchFields.php' ?>
 
-<head>
-    <meta charset="UTF-8">
-    <title>GenomeAsistant | Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Benjamín Iván López Carrizales">
-    <meta name="description" content="Página para iniciar sesión en GenomeAsistant">
-    <link rel="stylesheet" href="<?php asset('assets/css/normalize.css'); ?>">
-    <link rel="stylesheet" href="<?php asset('assets/css/header.css'); ?>">
-    <link rel="stylesheet" href="<?php asset('assets/css/home.css'); ?>">
-    <link rel="stylesheet" href="<?php asset('assets/css/footer.css'); ?>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-    <?php require_once '../src/Views/header.php' ?>
-
-    <main>
-        <section class="search-section">
-            <form action="<?php echo BASE_URL; ?>ensembl/buscar" method="POST">
-                <fieldset>
-                    <legend>Search by data type:</legend>
-                    <label><input type="radio" name="data-type" value="snp" <?php echo ($userInput['data-type'] ?? '') === 'snp' ? 'checked' : ''; ?> required> SNP</label>
-                    <label><input type="radio" name="data-type" value="name" <?php echo ($userInput['data-type'] ?? '') === 'name' ? 'checked' : ''; ?> required> Name</label>
-                    <label><input type="radio" name="data-type" value="genomic-coordinates" <?php echo ($userInput['data-type'] ?? '') === 'genomic-coordinates' ? 'checked' : ''; ?> required> Genomic Coordinates</label>
+            <div class="search">
+                <fieldset class="search-bar">
+                    <legend>Search:</legend>
+                    <input type="text" id="input" placeholder="e.g. GRCh38 or 1:109274570 or rs7528419" required value="<?php echo htmlspecialchars($userInput['value'] ?? ''); ?>">
                 </fieldset>
 
-                <fieldset>
-                    <legend>Value:</legend>
-                    <input type="text" name="value" placeholder="Enter value" required value="<?php echo htmlspecialchars($userInput['value'] ?? ''); ?>">
-                </fieldset>
+                <button class="search-button" type="submit">Search</button>
+            </div>
+        </form>
+    </section>
 
-                <button type="submit">Search</button>
-            </form>
-        </section>
-
-        <section class="results-section">
-            <?php if (isset($error)): ?>
-                <div class="error-message">
-                    <h3>Error</h3>
-                    <p><?php echo $error; ?></p>
+    <div class="results-container">
+        <div class="results-header">
+            <h3 class="results-title">Resultados</h3>
+            <div class="results-buttons">
+                <a class="results-button">
+                    <div class="csv-icon">
+                        <?php
+                        $svgPath = ROOT_PATH . '/public/assets/img/csv.svg';
+                        if (file_exists($svgPath)) {
+                            echo file_get_contents($svgPath);
+                        } else {
+                            echo '';
+                        }
+                        ?>
+                    </div>
+                    <p>Export .csv</p>
+                </a>
+                <a class="results-button">
+                    <div class="trash-icon">
+                        <?php
+                        $svgPath = ROOT_PATH . '/public/assets/img/trash.svg';
+                        if (file_exists($svgPath)) {
+                            echo file_get_contents($svgPath);
+                        } else {
+                            echo '';
+                        }
+                        ?>
+                    </div>
+                    <p>Clear search</p>
+                </a>
+            </div>
+        </div>
+        <section class="results" id="results-container">
+            <div id="results-pre">
+                <div class="database-icon">
+                    <?php
+                    $svgPath = ROOT_PATH . '/public/assets/img/database.svg';
+                    if (file_exists($svgPath)) {
+                        echo file_get_contents($svgPath);
+                    } else {
+                        echo '';
+                    }
+                    ?>
                 </div>
-            <?php endif; ?>
+                <p class="results-message">No results were found</p>
 
-            <?php if (isset($resultados)): ?>
-                <div class="results-data">
-                    <h3>Resultados de la Búsqueda</h3>
-                    <pre><?php echo json_encode($resultados, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES); ?></pre>
-                </div>
-            <?php endif; ?>
+            </div>
         </section>
-    </main>
-
-    <?php require_once '../src/Views/footer.php' ?>
-
-</body>
-
-</html>
+    </div>
+</div>

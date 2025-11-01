@@ -3,7 +3,7 @@
         'name' => 'benjamin/genomeasistant',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '4e6cb537c7b96228783d91dd27450089f935716b',
+        'reference' => 'a683422a606c24b64180b5c4f15a985a57cdb3ae',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'benjamin/genomeasistant' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '4e6cb537c7b96228783d91dd27450089f935716b',
+            'reference' => 'a683422a606c24b64180b5c4f15a985a57cdb3ae',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

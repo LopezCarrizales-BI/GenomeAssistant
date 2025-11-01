@@ -3,6 +3,7 @@
   "description": "Proyecto PHP con integración Perl y API",
   "require": {
     "guzzlehttp/guzzle": "^7.10",
-    "vlucas/phpdotenv": "^5.6"
+    "vlucas/phpdotenv": "^5.6",
+    "ralouphie/getallheaders": "^3.0"
   }
 }

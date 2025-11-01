@@ -1,10 +1,8 @@
-# Activa el motor de reescritura de URLs
-RewriteEngine On
+<IfModule mod_rewrite.c>
+    RewriteEngine On
 
-# Si la petición NO es para un archivo existente...
-RewriteCond %{REQUEST_FILENAME} !-f
-# Y si la petición NO es para un directorio existente...
-RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
 
-# ...entonces redirige la petición a index.php
-RewriteRule . index.php [L]
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>

@@ -1,0 +1,120 @@
+.files-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+  align-items: center;
+  background-color: var(--bg-surface);
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.navbar-search {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  min-height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px var(--shadow-color);
+  background-color: var(--bg-surface);
+  padding: 15px 24px;
+  box-sizing: border-box;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: 40px;
+  border: 1px solid var(--border-default);
+  border-radius: 6px;
+  padding: 0 12px;
+  background-color: var(--bg-surface);
+  transition: border-color 0.2s;
+}
+
+.search-bar:focus-within {
+  border-color: var(--border-brand);
+}
+
+.search-icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.6;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.search-form {
+  flex-grow: 1;
+  display: flex;
+  height: 100%;
+}
+.search-input {
+  border: none;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.filter-select {
+  height: 40px;
+  border: 1px solid var(--border-default);
+  border-radius: 6px;
+  background-color: var(--bg-surface);
+  min-width: 150px;
+}
+
+.files {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1200px;
+  gap: 15px;
+}
+
+.file-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background: var(--bg-surface);
+  box-shadow: 0 4px 6px var(--shadow-color);
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.file-menu.active {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .navbar-search {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 20px;
+  }
+  .search-bar {
+    width: 100%;
+  }
+  .search-filters {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .filter-select {
+    flex-grow: 1;
+  }
+}

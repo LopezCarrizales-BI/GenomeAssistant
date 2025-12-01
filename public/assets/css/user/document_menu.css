@@ -1,0 +1,81 @@
+.file-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  z-index: 50;
+
+  background-color: var(--bg-page);
+  min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px var(--shadow-color),
+    0 4px 6px -2px var(--shadow-color);
+  border: 1px solid var(--border-default);
+  padding: 6px 0;
+  overflow: hidden;
+}
+
+.file-menu.show {
+  display: block;
+}
+
+.menu-option {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background: none;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.menu-option:hover {
+  background-color: var(--menu-item-hover);
+}
+
+.option-icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  color: var(--text-brand);
+}
+
+.option-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.option-name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  font-family: inherit;
+}
+
+.menu-option.danger {
+  margin-top: 4px;
+  border-top: 1px solid var(--border-default);
+  padding-top: 12px;
+  color: var(--status-text-danger);
+}
+
+.menu-option.danger .option-name {
+  color: var(--status-danger-text);
+}
+
+.menu-option.danger .option-icon {
+  color: var(--status-danger-text);
+}
+
+.menu-option.danger:hover {
+  background-color: var(--status-danger-bg);
+}

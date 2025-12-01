@@ -1,0 +1,11 @@
+<svg width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 15c6.667-6 13.333 0 20-6" stroke="#e2e8f0" />
+    <path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993" stroke="#2563eb" />
+    <path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993" stroke="#2563eb" />
+    <path d="M17 17l-1 1" stroke="#94a3b8" />
+    <path d="M14 14l-1 1" stroke="#94a3b8" />
+    <path d="M8 8l-1 1" stroke="#94a3b8" />
+    <path d="M11 11l-1 1" stroke="#94a3b8" />
+    <circle cx="12" cy="12" r="10" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4 4" />
+</svg>

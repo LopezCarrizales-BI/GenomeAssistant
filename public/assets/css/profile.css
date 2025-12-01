@@ -1,0 +1,190 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-page);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.profile-card {
+  background-color: var(--bg-surface);
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border: 1px solid var(--border-default);
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background-color: var(--bg-avatar-profile);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--bg-surface);
+  box-shadow: 0 0 0 2px var(--border-focus);
+}
+
+.profile-avatar svg {
+  width: 60%;
+  height: 60%;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-brand);
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+.profile-role {
+  font-size: 0.9rem;
+  color: var(--border-focus);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.profile-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-light);
+  border: none;
+  margin: 1.5rem 0;
+}
+
+.profile-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-surface-alt);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.detail-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.detail-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-surface);
+  border-radius: 8px;
+  margin-right: 1rem;
+  color: var(--text-brand);
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px var(--shadow-color);
+}
+
+.detail-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.detail-value {
+  font-size: 1rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.profile-actions {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.linkedin-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--action-social-linkedin-bg);
+  color: var(--text-inverse);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  box-shadow: 0 2px 4px var(--shadow-color-strong);
+}
+
+.linkedin-btn:hover {
+  background-color: var(--action-social-linkedin-hover);
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .profile-name {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 1rem;
+    align-items: flex-start;
+  }
+
+  .profile-card {
+    padding: 2rem 1.5rem;
+    box-shadow: none;
+    border: 1px solid var(--border-default);
+  }
+
+  .profile-name {
+    font-size: 1.25rem;
+  }
+
+  .profile-avatar {
+    width: 80px;
+    height: 80px;
+  }
+}

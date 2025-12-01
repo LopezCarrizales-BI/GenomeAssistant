@@ -1,6 +1,7 @@
 # ########## Archivos Sensibles y de Configuración de Entorno ##########
 # La regla más importante: NUNCA subas tus credenciales.
 config/database.php
+config/config.php
 .env
 
 # ########## Dependencias de PHP (Composer) ##########

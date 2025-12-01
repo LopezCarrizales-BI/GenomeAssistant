@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" transform="rotate(0) matrix(1 0 0 1 0 0)" width="48"
+    height="48" viewBox="0 0 48 48">
+    <g fill="currentColor" stroke-linejoin="round" stroke-width="4"
+        style="stroke-width: 4; stroke-linejoin: round;">
+        <path fill="currentColor" stroke="#f00" d="M9 10V44H39V10H9Z" style="fill: #fff; stroke: currentColor;"></path>
+        <path stroke="#fff" stroke-linecap="round" d="M20 20V33"
+            style="stroke: currentColor; stroke-linecap: round;"></path>
+        <path stroke="#f00" stroke-linecap="round" d="M28 20V33"
+            style="stroke: currentColor; stroke-linecap: round;"></path>
+        <path stroke="#f00" stroke-linecap="round" d="M4 10H44"
+            style="stroke: currentColor; stroke-linecap: round;"></path>
+        <path fill="currentColor" stroke="#000" d="M16 10L19.289 4H28.7771L32 10H16Z"
+            style="fill: currentcolor; stroke: currentColor;"></path>
+    </g>
+</svg>

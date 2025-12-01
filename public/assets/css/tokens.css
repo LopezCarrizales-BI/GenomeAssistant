@@ -1,0 +1,127 @@
+:root {
+  --base-brand-blue-dark: #2469a0;
+  --base-brand-cyan: #10bce3;
+  --base-brand-cyan-rgb: 16, 188, 227;
+  --base-brand-teal: #3dd6af;
+  --base-brand-teal-hover: #31b292;
+  --base-brand-teal-active: #2bc49d;
+  --base-brand-teal-dark: #0f766e;
+  --base-brand-green-light: #8bee27;
+
+  --base-accent-blue: #3b82f6;
+  --base-accent-violet: #8b5cf6;
+
+  --base-white: #ffffff;
+  --base-black: #000000;
+
+  --base-gray-50: #f9fafb;
+  --base-gray-100: #f1f5f9;
+  --base-gray-200: #e2e8f0;
+  --base-gray-300: #cbd5e1;
+  --base-gray-400: #94a3b8;
+  --base-gray-500: #6b7280;
+  --base-gray-600: #4b5563;
+  --base-gray-700: #334155;
+  --base-gray-800: #1f2937;
+  --base-gray-900: #111111;
+
+  --base-sky-50: #f0f9ff;
+  --base-sky-100: #e0f2fe;
+
+  --base-indigo-100: #e0e7ff;
+  --base-indigo-700: #4338ca;
+
+  --base-green-100: #dcfce7;
+  --base-green-700: #15803d;
+
+  --base-amber-400: #fbbf24;
+  --base-amber-500: #f59e0b;
+  --base-amber-800: #92400e;
+
+  --base-red-50: #fef2f2;
+  --base-red-100: #fee2e2;
+  --base-red-500: #ef4444;
+  --base-red-800: #991b1b;
+
+  --base-linkedin: #0077b5;
+  --base-linkedin-dark: #005582;
+
+  /* Backgrounds */
+  --bg-page: var(--base-gray-50);
+  --bg-surface: var(--base-white);
+  --bg-surface-alt: var(--base-gray-50);
+  --bg-header: var(--base-brand-blue-dark);
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+  --bg-avatar-default: var(--base-sky-100);
+  --bg-avatar-profile: var(--base-sky-50);
+
+  /* Text Colors */
+  --text-main: var(--base-gray-900);
+  --text-body: var(--base-gray-700);
+  --text-muted: var(--base-gray-500);
+  --text-placeholder: var(--base-gray-400);
+  --text-inverse: var(--base-white);
+  --text-brand: var(--base-brand-blue-dark);
+  --text-link: var(--base-brand-blue-dark);
+
+  /* Borders */
+  --border-light: var(--base-gray-100);
+  --border-medium: var(--base-gray-200);
+  --border-default: var(--base-gray-300);
+  --border-focus: var(--base-brand-cyan);
+  --border-brand: var(--base-brand-blue-dark);
+
+  /* Actions / Buttons */
+  --action-primary-bg: var(--base-brand-teal);
+  --action-primary-text: var(--base-white);
+  --action-primary-hover: var(--base-brand-teal-hover);
+  --action-primary-active: var(--base-brand-teal-active);
+
+  --action-secondary-bg: var(--base-white);
+  --action-secondary-text: var(--base-gray-900);
+  --action-secondary-border: var(--base-gray-300);
+  --action-secondary-hover: var(--base-gray-100);
+
+  --action-social-linkedin-bg: var(--base-linkedin);
+  --action-social-linkedin-hover: var(--base-linkedin-dark);
+
+  /* Status & Feedback */
+  --status-danger-bg: var(--base-red-50);
+  --status-danger-border: var(--base-red-100);
+  --status-danger-dot: var(--base-red-500);
+
+  --status-active-accent: var(--base-accent-blue);
+  --status-success-dot: var(--base-brand-teal);
+  --status-warning-dot: var(--base-amber-500);
+  --status-inactive-dot: var(--base-amber-400);
+
+  /* Status Text */
+  --status-text-success: var(--base-brand-teal-dark);
+  --status-text-warning: var(--base-amber-800);
+  --status-text-danger: var(--base-red-800);
+  --status-text-danger-light: var(--base-red-500);
+
+  /* Badges */
+  --badge-admin-bg: var(--base-indigo-100);
+  --badge-admin-text: var(--base-indigo-700);
+
+  --badge-user-bg: var(--base-green-100);
+  --badge-user-text: var(--base-green-700);
+
+  /* Data Visualization / Dashboard Icons */
+  --dataviz-users-bg: var(--base-brand-blue-dark);
+  --dataviz-search-bg: var(--base-brand-cyan);
+  --dataviz-new-bg: var(--base-brand-teal);
+  --dataviz-server-bg: var(--base-accent-violet);
+  --dataviz-trend-positive: var(--base-brand-teal);
+
+  /* Menu & Interactions */
+  --menu-bg: var(--base-gray-50);
+  --menu-item-hover: var(--base-gray-100);
+  --trigger-hover: var(--base-gray-800);
+
+  /* Effects */
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  --shadow-color-strong: rgba(0, 0, 0, 0.1);
+  --ring-focus-cyan: rgba(var(--base-brand-cyan-rgb), 0.1);
+}

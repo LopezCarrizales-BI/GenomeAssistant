@@ -1,8 +1,8 @@
-.footer-content-rights {
-  height: 5%;
+footer {
   display: flex;
+  height: 2vh;
+  justify-content: center;
   align-items: center;
-  margin: auto;
-  background-color: #2469a0;
-  color: #ffffff;
+  background-color: var(--bg-header);
+  color: var(--text-inverse);
 }

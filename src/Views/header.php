@@ -1,35 +1,50 @@
 <header>
     <div class="header-container">
-        <div class="logo-nav">
-            <a class="home" href="/">
-                <img class="logo" alt="GenomeAssistant Logo" src="<?php asset('/assets/img/blueLogo.svg'); ?>">
-            </a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+            <?php echo Icon::get('burger-menu'); ?>
+        </button>
+
+        <a class="home-logo" href="<?php echo (isset($isAdmin) && $isAdmin) ? asset('/admin/dashboard') : asset('/home'); ?>">
+            <img class="logo" alt="GenomeAssistant Logo" src="<?php echo asset('/assets/img/whiteLogo.svg'); ?>">
+        </a>
+
+        <div class="nav-menu" id="nav-menu">
+            <div class="nav-header-mobile">
+                <span class="menu-title">Menu</span>
+                <button class="close-menu" id="close-menu-btn">&times;</button>
+            </div>
+
             <nav class="navbar" aria-label="main navigation">
                 <ul class="nav-options">
-                    <li class="nav-option selected-option"><a class="nav-link selected-link" href="/public/">Browser</a></li>
-                    <li class="nav-option"><a class="nav-link" href="files">Files</a></li>
-                    <li class="nav-option"><a class="nav-link" href="helpDocs.php">Help & Docs</a></li>
+                    <?php if (isset($isAdmin) && $isAdmin): ?>
+                        <li class="nav-option"><a class="nav-link" href="<?php echo asset('/dashboard'); ?>">Dashboard</a></li>
+                        <li class="nav-option"><a class="nav-link" href="<?php echo asset('/users'); ?>">Users Management</a></li>
+                    <?php else: ?>
+                        <li class="nav-option"><a class="nav-link" href="<?php echo asset('/home'); ?>">Browser</a></li>
+                        <li class="nav-option"><a class="nav-link" href="<?php echo asset('/files'); ?>">Files</a></li>
+                        <li class="nav-option"><a class="nav-link" href="<?php echo asset('/help'); ?>">Help & Docs</a></li>
+                    <?php endif; ?>
                 </ul>
             </nav>
-        </div>
-        <div class="profile-nav">
-            <a href="#" class="notifications-icon" aria-label="Notifications">
-                <?php
-                $svgFileSystemPath = ROOT_PATH . '/public/assets/img/notifications.svg';
 
-                if (file_exists($svgFileSystemPath)) {
-                    echo file_get_contents($svgFileSystemPath);
-                } else {
-                    echo '';
-                }
-                ?>
-            </a>
-            <nav class="navbar" aria-label="user navigation">
+            <nav class="navbar user-nav" aria-label="user navigation">
+                <a href="#" class="notifications-icon desktop-bell" aria-label="Notifications">
+                    <?php echo Icon::get('notifications'); ?>
+                </a>
+
                 <ul class="nav-options">
-                    <li class="nav-option"><a class="nav-link" href="profile.php">Profile</a></li>
-                    <li class="nav-option"><a class="nav-link" href="landing.php">Log out</a></li>
+                    <li class="nav-option"><a class="nav-link" href="<?php echo asset('/profile'); ?>">Profile</a></li>
+                    <li class="nav-option"><a class="nav-link" href="<?php echo asset('/logout'); ?>">Log out</a></li>
                 </ul>
             </nav>
         </div>
+
+        <div class="header-actions mobile-bell">
+            <a href="#" class="notifications-icon" aria-label="Notifications">
+                <?php echo Icon::get('notifications'); ?>
+            </a>
+        </div>
+
+        <div class="overlay" id="overlay"></div>
     </div>
 </header>

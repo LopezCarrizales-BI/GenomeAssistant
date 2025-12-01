@@ -1,0 +1,334 @@
+.home-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: var(--bg-page);
+  gap: 2rem;
+  align-items: center;
+}
+
+.search-section-card {
+  background-color: var(--bg-surface);
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--border-default);
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.search-title {
+  color: var(--text-brand);
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.search-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.main-search-form {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.search-bar-wrapper {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.input-container {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-placeholder);
+}
+
+.main-search-input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s;
+  background-color: var(--bg-surface-alt);
+}
+
+.main-search-input:focus {
+  background-color: var(--bg-surface);
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px var(--ring-focus-cyan);
+}
+
+.search-button-primary {
+  padding: 0 2rem;
+  background-color: var(--action-primary-bg);
+  color: var(--action-primary-text);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.search-button-primary:hover {
+  background-color: var(--action-primary-hover);
+}
+
+.search-options-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.options-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-brand);
+}
+
+.fields-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  gap: 0.5rem;
+}
+
+.checkbox-wrapper input {
+  display: none;
+}
+
+.custom-check {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border-default);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  background-color: var(--bg-surface);
+}
+
+.checkbox-wrapper input:checked + .custom-check {
+  background-color: var(--action-primary-bg);
+  border-color: var(--action-primary-bg);
+}
+
+.checkbox-wrapper input:checked + .custom-check::after {
+  content: "";
+  width: 5px;
+  height: 9px;
+  border: solid var(--text-inverse);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-bottom: 2px;
+}
+
+.label-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.checkbox-wrapper:hover .label-text {
+  color: var(--text-brand);
+}
+
+.results-container {
+  background-color: var(--bg-surface);
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border-default);
+  height: 100%;
+  flex-grow: 1;
+}
+
+.results-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-surface);
+}
+
+.results-title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text-brand);
+}
+
+.results-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.action-button.secondary {
+  background-color: var(--action-primary-bg);
+  color: var(--action-primary-text);
+}
+
+.action-button.secondary:hover {
+  background-color: var(--action-primary-hover);
+}
+
+.action-button.danger-ghost {
+  background-color: transparent;
+  color: var(--status-text-danger);
+  border: 1px solid var(--status-danger-border);
+}
+
+.action-button.danger-ghost:hover {
+  background-color: var(--status-danger-bg);
+}
+
+.icon-box svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.results-body {
+  padding: 2rem;
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.state-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-placeholder);
+}
+
+.state-icon svg {
+  width: 150px;
+  height: 150px;
+  fill: var(--border-default);
+  margin-bottom: 1rem;
+}
+
+.state-message {
+  font-size: 1.1rem;
+}
+
+#results-table-view {
+  display: block;
+  height: auto;
+}
+
+.generated-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.generated-table th {
+  background-color: var(--bg-header);
+  color: var(--text-inverse);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.generated-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-body);
+}
+
+.generated-table tr:hover {
+  background-color: var(--bg-surface-alt);
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    padding: 1rem;
+  }
+  .search-section-card {
+    padding: 1.5rem;
+  }
+  .search-title {
+    font-size: 1.5rem;
+  }
+  .search-bar-wrapper {
+    flex-direction: column;
+  }
+  .search-button-primary {
+    width: 100%;
+    padding: 12px 0;
+  }
+  .results-body {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+  .generated-table {
+    min-width: 600px;
+  }
+  .results-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  .results-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
